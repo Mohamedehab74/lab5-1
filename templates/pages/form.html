@@ -1,0 +1,19 @@
+{% block content %}
+<h2>Form Page</h2> 
+
+<form method="post">
+    {% csrf_token %}
+    
+    <label for="id_username">Username:</label><br>
+    <input type="text" id="id_username" name="username" placeholder="username"><br><br>
+    
+    <label for="id_password">Password:</label><br>
+    <input type="password" id="id_password" name="password" placeholder="password"><br><br>
+    
+    <input type="submit" value="Login">
+</form>
+
+{% if message %}
+    <p style="color:green;">{{ message }}</p>
+{% endif %}
+{%endblock%}
