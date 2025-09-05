@@ -1,0 +1,8 @@
+{% block title %}Form Page{% endblock title %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    {{  lf  }}
+    <button type="submit">Submit</button>
+</form>
+{% endblock content%}
